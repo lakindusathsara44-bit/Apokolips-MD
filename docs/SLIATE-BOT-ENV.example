@@ -1,0 +1,19 @@
+# Apokolips / SLIATE Study Bot configuration example
+# Copy values into your host's environment settings. Never commit real secrets.
+
+SLIATE_BOT_ENABLED=false
+SLIATE_TIMEZONE=Asia/Colombo
+SLIATE_DAILY_QUESTIONS=5
+SLIATE_COURSE_INTERVAL_MINUTES=288
+SLIATE_FIRST_BATCH_TIME=08:00
+SLIATE_ADMIN_NUMBERS=94776083337
+
+# PostgreSQL connection string; use the existing host's secure secret manager.
+DATABASE_URL=
+
+# OpenAI Responses API key; do not put a real key in this file or Git.
+OPENAI_API_KEY=
+OPENAI_MODEL=
+
+# Storage for administrator-uploaded PDFs and extracted text.
+SLIATE_RESOURCE_DIR=./storage/sliate
