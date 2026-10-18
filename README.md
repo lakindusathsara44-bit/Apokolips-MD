@@ -1,6 +1,6 @@
 <div align="center">
 
-# Toxic MD — WhatsApp Bot
+# Apokolips — WhatsApp Bot
 
 ![Node.js](https://img.shields.io/badge/Node.js-20+-brightgreen?style=flat-square&logo=node.js)
 ![Platform](https://img.shields.io/badge/Platform-WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white)
@@ -56,9 +56,9 @@ Change the bot's reply language anytime with: `.language <code>` (Owner only)
 
 ## 📖 About
 
-**Toxic-MD** is a modern WhatsApp bot built on the **Baileys Multi-Device** library. It helps you manage groups, automate repetitive tasks, protect your chats, and enjoy a wide range of fun and utility commands — all in a single, easy-to-deploy package.
+**Apokolips** is a modern WhatsApp bot built on the **Baileys Multi-Device** library. It helps you manage groups, automate repetitive tasks, protect your chats, and enjoy a wide range of fun and utility commands — all in a single, easy-to-deploy package.
 
-### Why Toxic-MD?
+### Why Apokolips?
 
 | Feature | Details |
 |---|---|
@@ -76,11 +76,11 @@ Change the bot's reply language anytime with: `.language <code>` (Owner only)
 
 #### Step 1 — Fork the Repository
 
-[![Fork Repo](https://img.shields.io/badge/FORK%20REPOSITORY-brightgreen?style=for-the-badge&logo=github)](https://github.com/xhclintohn/Toxic-MD/fork)
+[![Fork Repo](https://img.shields.io/badge/FORK%20REPOSITORY-brightgreen?style=for-the-badge&logo=github)](https://github.com/xhclintohn/Apokolips/fork)
 
 #### Step 2 — Pair Your WhatsApp
 
-[![Pair WhatsApp](https://img.shields.io/badge/PAIR%20WHATSAPP-blue?style=for-the-badge&logo=whatsapp&logoColor=white)](https://fork.toxicx.tech)
+[![Pair WhatsApp](https://img.shields.io/badge/PAIR%20WHATSAPP-blue?style=for-the-badge&logo=whatsapp&logoColor=white)](https://github.com/lakindusathsara44-bit/Apokolips-MD)
 
 #### Step 3 — Deploy the Bot
 
@@ -88,7 +88,7 @@ Change the bot's reply language anytime with: `.language <code>` (Owner only)
 
 ### Quick Start
 
-1. Visit: **https://toxicx.tech/pairing**
+1. Visit: **https://github.com/lakindusathsara44-bit/Apokolips-MD**
 2. Open WhatsApp on your phone
 3. Go to **Settings → Linked Devices**
 4. Tap **Pair Device** and scan or enter the pairing code
@@ -98,6 +98,11 @@ SESSION=YOUR_SESSION_ID
 ```
 
 ---
+
+## Owner
+
+- **Name:** Lakindu Sathsara
+- **WhatsApp:** [+94 77 608 3337](https://wa.me/94776083337)
 
 ## Features
 
@@ -141,7 +146,7 @@ SESSION=YOUR_SESSION_ID
 
 ## 🛡️ Safety Notice
 
-> ⚠️ Using unofficial WhatsApp APIs may violate WhatsApp's Terms of Service. Toxic-MD is a self-hosted project. Use it responsibly.
+> ⚠️ Using unofficial WhatsApp APIs may violate WhatsApp's Terms of Service. Apokolips is a self-hosted project. Use it responsibly.
 
 **Best Practices:**
 
@@ -164,17 +169,17 @@ SESSION=YOUR_SESSION_ID
 
 ## 📚 Disclaimer
 
-> ⚠️ All features provided by Toxic-MD are strictly for **educational purposes only**.
+> ⚠️ All features provided by Apokolips are strictly for **educational purposes only**.
 > The developer is not responsible for any misuse, account bans, or violations of WhatsApp's policies that may result from using this bot.
 
 ---
 
 <div align="center">
 
-**Toxic-MD**
+**Apokolips**
 
 Simple • Powerful • Multi-Device WhatsApp Bot
 
-*Built with ❤️ by xh_clinton*
+*Customized by Lakindu Sathsara*
 
 </div>
