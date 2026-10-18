@@ -37,8 +37,20 @@ Only questions marked `reviewed=true` are sent. Populate question bank from curr
 ## Database
 The migration SQL is in `docs/SLIATE-BOT-SCHEMA.sql`. The bot's `.sliate` command currently runs the migration on first use; for controlled production rollout, run it from a trusted deployment environment first. Back up PostgreSQL and restrict database credentials.
 
-## PDF ingestion
-Do not upload PDFs to public folders. Store source files in private persistent storage, extract text in a controlled worker, retain document/source/page metadata, and review generated questions before marking them reviewed. PDF ingestion is not yet wired to a WhatsApp upload command in this extension.
+## PDF / notes ingestion
+Do not upload PDFs to public folders. On the trusted deployment host, run:
+
+```bash
+node scripts/sliate-draft-questions.js IT "Programming Fundamentals" ./private-notes.pdf "SLIATE module notes 2026"
+```
+
+The script copies the source into the configured private resource directory, extracts PDF/text content, asks the OpenAI Responses API to draft questions, and stores the questions as `reviewed=false`. Review the answer key, explanations, and source locations before approving them. To approve only questions you have manually verified, use a restricted database session, for example:
+
+```sql
+UPDATE sliate_questions SET reviewed = TRUE WHERE id IN (123, 124);
+```
+
+Replace the example course/module/file with real material. The script runs on the host and is not a public WhatsApp PDF-upload command.
 
 ## Verification still required before live launch
 1. Install dependencies and run syntax checks/tests.
