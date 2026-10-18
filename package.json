@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "prestart": "node patch-baileys.js"
+    "prestart": "node patch-baileys.js",
+    "test": "node --test",
+    "sliate:draft": "node scripts/sliate-draft-questions.js"
   },
   "engines": {
     "node": ">=22.0.0"
@@ -44,7 +46,8 @@
     "pg": "^8.16.0",
     "adm-zip": "^0.5.16",
     "@napi-rs/canvas": "^0.1.70",
-    "https-proxy-agent": "^7.0.6"
+    "https-proxy-agent": "^7.0.6",
+    "pdf-parse": "^1.1.1"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8",

@@ -109,6 +109,7 @@ import groupEvents from './handlers/eventHandler.js';
 import connectionHandler from './handlers/connectionHandler.js';
 import toxic from './src/toxic.js';
 import antibot from './features/antibot.js';
+import { startSliateScheduler } from './lib/sliateStudyBot.js';
 import './features/cleanup.js';
 import ffmpegInstaller from '@ffmpeg-installer/ffmpeg';
 
@@ -1180,6 +1181,7 @@ async function startToxic() {
       }
 
       if (connection === "open") {
+        startSliateScheduler(client);
         global._toxicSessionTs = Math.floor(Date.now() / 1000);
         global._toxicSeenIds = new Set();
         global._toxicRealTime = false;
