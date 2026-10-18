@@ -69,3 +69,7 @@ CREATE INDEX IF NOT EXISTS sliate_questions_course_module_idx
 
 CREATE INDEX IF NOT EXISTS sliate_attempts_student_idx
   ON sliate_quiz_attempts(student_id, answered_at DESC);
+
+-- Prevent duplicate scheduled batches after process restarts.
+CREATE UNIQUE INDEX IF NOT EXISTS sliate_delivery_once_per_student_batch_idx
+  ON sliate_delivery_log(student_id, course_code, scheduled_for);
