@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import pdfParse from 'pdf-parse';
 import { pathToFileURL } from 'node:url';
 import { draftQuestionsFromSource, addQuestion, addResource, migrate } from '../lib/sliateStudyBot.js';
@@ -23,8 +24,14 @@ async function main() {
   if (sourceText.trim().length < 200) throw new Error('Could not extract enough readable text from source.');
   const sourceLabel = labelParts.join(' ') || path.basename(absolute);
   await migrate();
+  const storageDir = path.resolve(process.env.SLIATE_RESOURCE_DIR || './storage/sliate');
+  await fs.mkdir(storageDir, { recursive: true, mode: 0o700 });
+  const safeExt = path.extname(absolute).toLowerCase() === '.pdf' ? '.pdf' : '.txt';
+  const storedPath = path.join(storageDir, `${Date.now()}-${crypto.randomBytes(6).toString('hex')}${safeExt}`);
+  await fs.copyFile(absolute, storedPath);
+  try { await fs.chmod(storedPath, 0o600); } catch {}
   const resourceId = await addResource({
-    courseCode, moduleName, title: sourceLabel,
+    courseCode, moduleName, title: sourceLabel, storedPath,
     sourceType: path.extname(absolute).toLowerCase() === '.pdf' ? 'uploaded_pdf' : 'notes',
     createdBy: process.env.SLIATE_ADMIN_NUMBERS?.split(',')[0] || '94776083337'
   });
